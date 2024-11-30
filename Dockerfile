@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors="KuroSetsuna29"
 LABEL org.opencontainers.image.source=https://github.com/KuroSetsuna29/performance-portfolio
 
 RUN apt-get update \
-    && apt-get install -y openjdk-17-jre libswt-gtk-4-jni libswt-gtk-4-java wget jq \
+    && apt-get install -y openjdk-21-jre libswt-gtk-4-jni libswt-gtk-4-java wget jq \
     && apt-get clean
 
 ENV TZ=America/Toronto
