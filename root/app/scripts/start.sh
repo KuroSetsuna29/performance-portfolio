@@ -1,6 +1,6 @@
 #/bin/bash
 
-LATEST_VERSION=$(wget -qO- https://api.github.com/repos/buchen/portfolio/releases/latest | jq -r '.assets | map(select(.browser_download_url | test("-linux.gtk.x86_64.tar.gz$"))) | last | .browser_download_url')
+LATEST_VERSION=$(wget -qO- https://api.github.com/repos/buchen/portfolio/releases/latest | jq -r '.assets | map(select(.browser_download_url | test("-linux.gtk.x86_64.tar.gz$"))) | first | .browser_download_url')
 echo "Latest version found: $LATEST_VERSION"
 
 if [ -f "/app/current_version.txt" ]; then
